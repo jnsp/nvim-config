@@ -26,8 +26,25 @@ https://github.com/tmux-plugins/tpm
 https://github.com/jimeh/tmux-themepack
 
 ### Tmux truecolor
+```bash
 curl -s https://raw.githubusercontent.com/JohnMorales/dotfiles/master/colors/24-bit-color.sh | bash
+```
 
+### mosh color problem
+```
+brew install mosh --HEAD
+```
+
+#### Compiling from Git
+
+```bash
+git clone https://github.com/mobile-shell/mosh
+cd mosh
+./autogen.sh
+./configure
+make
+make install
+```
 
 ### omyzsh
 
