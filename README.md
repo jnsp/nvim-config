@@ -24,3 +24,7 @@ https://github.com/tmux-plugins/tpm
 
 ### Tmux Themepack
 https://github.com/jimeh/tmux-themepack
+
+### omyzsh
+
+### powerlevel10k
