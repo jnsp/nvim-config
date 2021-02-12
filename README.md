@@ -25,6 +25,10 @@ https://github.com/tmux-plugins/tpm
 ### Tmux Themepack
 https://github.com/jimeh/tmux-themepack
 
+### Tmux truecolor
+curl -s https://raw.githubusercontent.com/JohnMorales/dotfiles/master/colors/24-bit-color.sh | bash
+
+
 ### omyzsh
 
 ### powerlevel10k
