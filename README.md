@@ -1,13 +1,20 @@
 # nvim-config
 
-This is my neovim setting.
+This is my neovim setting for Python development on MacOS.
 
 ## Install
 
 ### neovim
 
+The easiet way to install neovim is [Homebrew](https://brew.sh/). Other options are [here](https://github.com/neovim/neovim/wiki/Installing-Neovim).
+
+```bash
+brew install neovim
+```
+
 ### vim-plug
 
+Vim itself is not very useful. We need more plug-ins for Vim. There are many options for installing vim plug-in, but vim-plug is most recommended.
 
 https://github.com/junegunn/vim-plug
 
