@@ -1,4 +1,4 @@
-# nvim-config
+# My Neovim Config
 
 This is my [Neovim](https://neovim.io/) setting for Python development on MacOS.
 
@@ -35,6 +35,26 @@ If you can't find this file, make it manually.
 mkdir ~/.config/nvim/
 touch ~/.config/nvim/init.vim
 ```
+
+### How to install plug-in in Neovim using `vim-plug`
+
+If you want to intall [Nerdtree](https://github.com/preservim/nerdtree), you should write the URL of the repository in `init.vim` file.
+It looks like below.
+
+```vim
+call plug#begin('~/.vim/plugged')
+  Plug 'preservim/nerdtree'
+call plug#end()
+```
+
+This is vim script, and you should write your plug-in between `call plug#begin()` and `call plug#end()`.
+Then open Neovim, write command `:PlugInstall`.
+
+```
+:PlugInstall
+```
+
+This is how it works. There are another commands for `vim-plug` [here](https://github.com/junegunn/vim-plug#commands).
 
 ### pylintrc
 
