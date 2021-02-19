@@ -1,10 +1,10 @@
 # nvim-config
 
-This is my neovim setting for Python development on MacOS.
+This is my [Neovim](https://neovim.io/) setting for Python development on MacOS.
 
 ## Install
 
-### neovim
+### Neovim
 
 The easiet way to install neovim is [Homebrew](https://brew.sh/). Other options are [here](https://github.com/neovim/neovim/wiki/Installing-Neovim).
 
@@ -14,9 +14,12 @@ brew install neovim
 
 ### vim-plug
 
-Vim itself is not very useful. We need more plug-ins for Vim. There are many options for installing vim plug-in, but vim-plug is most recommended.
+Vim itself is not very useful.
+We need more plug-ins for Vim.
+There are many options for installing vim plug-in, but [vim-plug](https://github.com/junegunn/vim-plug) is simplest.
 
-https://github.com/junegunn/vim-plug
+The install directory is different with Vim and Neovim.
+You can read [this](https://github.com/junegunn/vim-plug#neovim) for Neovim.
 
 ```bash
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -24,7 +27,14 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ```
 ### init.vim
 
+`init.vim` is the configuration file of Neovim.
+It has different path with Vim.
+If you can't find this file, make it manually.
+
+```bash
 mkdir ~/.config/nvim/
+touch ~/.config/nvim/init.vim
+```
 
 ### pylintrc
 
