@@ -29,6 +29,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 `init.vim` is the configuration file of Neovim.
 It has different path with Vim.
+The config path of Neovim is `~/.config/nvim/init.vim`
 If you can't find this file, make it manually.
 
 ```bash
@@ -55,6 +56,26 @@ Then open Neovim, write command `:PlugInstall`.
 ```
 
 This is how it works. There are another commands for `vim-plug` [here](https://github.com/junegunn/vim-plug#commands).
+
+## Plug-ins
+
+I introduce some useful plug-ins with my taste.
+
+### Nerdtree
+
+The [NERDTree](https://github.com/preservim/nerdtree) is a file system explorer. 
+It makes visual file tree in the Vim editor.
+The NERDTree has no short cuts originally.
+It recomemends some shortcuts to add on `init.vim` like blow.
+
+```vim
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+```
+
+This script adds shortcuts, for example `<C-n>` means `Ctrl-n` and it toggles the file tree on the editor.
 
 ### pylintrc
 
