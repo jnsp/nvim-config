@@ -14,17 +14,17 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-" ale linters
+" ale - linters
 let g:ale_linters = {'python': ['flake8', 'pylint']}
 " let g:ale_python_pylint_options = '--disable=redefined-outer-name'
 
-" ale fixers
+" ale - fixers
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'python': ['yapf'],
 \}
 
-" Set this variable to 1 to fix files when you save them.
+" ale - fix files when you save them.
 let g:ale_fix_on_save = 1
 
 " ale - kinder message

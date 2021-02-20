@@ -143,7 +143,7 @@ You should read the doc for this plugin.
 There are some options for me below.
 
 ```vim
-" Set this variable to 1 to fix files when you save them.
+" ale - fix files when you save them.
 let g:ale_fix_on_save = 1
 
 " ale - kinder message
@@ -169,7 +169,6 @@ You need to set `pylintrc` configuration file to control it or use plugins for `
 I usually load `pylint_flask` and `pylint_flaks_sqlalchemy` plugin on `init.vim`.
 There are so many people frustrated by too kind `pylint`, so you can find every kinds of `pylint` plugin. 
 
-### pylintrc
 
 ### Tmux Plugin Manager
 https://github.com/tmux-plugins/tpm
