@@ -77,6 +77,12 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 This script adds shortcuts, for example `<C-n>` means `Ctrl-n` and it toggles the file tree on the editor.
 
+### commentary.vim
+
+This is the Vim plugin artist, Tim Pope's [commentary.vim](https://github.com/tpope/vim-commentary).
+Just use `gcc` to comment out some codes.
+I used to do `visual-block mode` when I commented out without `commentary.vim`. This is much easier absolutely.
+
 ### pylintrc
 
 ### Tmux Plugin Manager
