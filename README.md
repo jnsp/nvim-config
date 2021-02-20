@@ -15,8 +15,8 @@ brew install neovim
 ### vim-plug
 
 Vim itself is not very useful.
-We need more plug-ins for Vim.
-There are many options for installing vim plug-in, but [vim-plug](https://github.com/junegunn/vim-plug) is simplest.
+We need more plugins for Vim.
+There are many options for installing vim plugin, but [vim-plug](https://github.com/junegunn/vim-plug) is simplest.
 
 The install directory is different with Vim and Neovim.
 You can read [this](https://github.com/junegunn/vim-plug#neovim) for Neovim.
@@ -37,7 +37,7 @@ mkdir ~/.config/nvim/
 touch ~/.config/nvim/init.vim
 ```
 
-### How to install plug-in in Neovim using `vim-plug`
+### How to install plugin in Neovim using `vim-plug`
 
 If you want to intall [Nerdtree](https://github.com/preservim/nerdtree), you should write the URL of the repository in `init.vim` file.
 It looks like below.
@@ -48,7 +48,7 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 ```
 
-This is vim script, and you should write your plug-in between `call plug#begin()` and `call plug#end()`.
+This is vim script, and you should write your plugin between `call plug#begin()` and `call plug#end()`.
 Then open Neovim, write command `:PlugInstall`.
 
 ```
@@ -57,9 +57,9 @@ Then open Neovim, write command `:PlugInstall`.
 
 This is how it works. There are another commands for `vim-plug` [here](https://github.com/junegunn/vim-plug#commands).
 
-## Plug-ins
+## Plugin
 
-I introduce some useful plug-ins with my taste.
+I introduce some useful plugins with my taste.
 
 ### Nerdtree
 
@@ -81,7 +81,7 @@ This script adds shortcuts, for example `<C-n>` means `Ctrl-n` and it toggles th
 
 This is the Vim plugin artist, Tim Pope's [commentary.vim](https://github.com/tpope/vim-commentary).
 Just use `gcc` to comment out some codes.
-I used to do `visual-block mode` when I commented out without `commentary.vim`. This is much easier absolutely.
+I used to do `visual-block mode` when I commented out without `commentary.vim`. Absolutely, this is much easier.
 
 ### pylintrc
 
