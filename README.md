@@ -102,6 +102,20 @@ syntax on
 colorscheme onedark
 ```
 
+### vim-airline
+
+[vim-airline](https://github.com/vim-airline/vim-airline) offers a nice status line on the bottome of vim windows.
+It has its own theme plugin, [vim-airline-theme](https://github.com/vim-airline/vim-airline-themes).
+This theme plugin has to be installed too.
+
+vim-airline can use `onedark` theme that was installed above.
+Set `airline_powerline_fonts = 1` to use powerline symbols on `init.vim`.
+
+```vim
+let g:airline_theme = 'onedark'
+let g:airline_powerline_fonts = 1
+```
+
 ### pylintrc
 
 ### Tmux Plugin Manager
