@@ -105,7 +105,7 @@ colorscheme onedark
 ### vim-airline
 
 [vim-airline](https://github.com/vim-airline/vim-airline) offers a nice status line on the bottome of vim windows.
-It has its own theme plugin, [vim-airline-theme](https://github.com/vim-airline/vim-airline-themes).
+It has its own theme plugin, [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes).
 This theme plugin has to be installed too.
 
 vim-airline can use `onedark` theme that was installed above.
