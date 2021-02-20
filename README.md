@@ -117,6 +117,52 @@ let g:airline_theme = 'onedark'
 let g:airline_powerline_fonts = 1
 ```
 
+### ALE
+
+[ALE (Asynchronous Lint Engine)](https://github.com/dense-analysis/ale) is a manager for all kinds of linter and fixer(sometimes called formatter).
+It's not a linter or fixer itself, but it controls how the specific linters and fixers behave.
+You can choose which linter or fixer is applied to your editor.
+
+I use `flake8` and `pylint` as my linter. 
+```vim
+" ale linters
+let g:ale_linters = {'python': ['flake8', 'pylint']}
+```
+
+And `yapf` is the fixer.
+```vim
+" ale fixers
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['yapf'],
+\}
+```
+
+ALE is very powerful, but it has a lot of options.
+You should read the doc for this plugin.
+There are some options for me below.
+
+```vim
+" Set this variable to 1 to fix files when you save them.
+let g:ale_fix_on_save = 1
+
+" ale - kinder message
+" [flake8] E302: expected 2 blank lines, found 1 [E]
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+" ale - keep the sign gutter open at all times
+let g:ale_sign_column_always = 1
+
+" ale - load pylint plugins
+let g:ale_python_pylint_options = '--load-plugins pylint_flask pylint_flask_sqlalchemy'
+
+" ale - moving between warnings and errors quickly
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+```
+
 ### pylintrc
 
 ### Tmux Plugin Manager
