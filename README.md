@@ -60,6 +60,7 @@ This is how it works. There are another commands for `vim-plug` [here](https://g
 ## Plugin
 
 I introduce some useful plugins with my taste.
+You can select some of them. But don't install every plugin without understading what they do for you. There are so many vim plugins, many people just installed it. Install one of them carefully watching the difference with before and after the plugin. It's like enjoyful shopping.
 
 ### Nerdtree
 
