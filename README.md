@@ -163,6 +163,12 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 ```
 
+[pylint](https://www.pylint.org/) is sometimes too strict.
+You need to set `pylintrc` configuration file to control it or use plugins for `pylint`.
+`let g:alie_python_pylint_options` is available on `init.vim` to load specific `pylint` plugin to `ALE`.
+I usually load `pylint_flask` and `pylint_flaks_sqlalchemy` plugin on `init.vim`.
+There are so many people frustrated by too kind `pylint`, so you can find every kinds of `pylint` plugin. 
+
 ### pylintrc
 
 ### Tmux Plugin Manager
