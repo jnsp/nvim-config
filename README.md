@@ -83,6 +83,25 @@ This is the Vim plugin artist, Tim Pope's [commentary.vim](https://github.com/tp
 Just use `gcc` to comment out some codes.
 I used to do `visual-block mode` when I commented out without `commentary.vim`. Absolutely, this is much easier.
 
+### vim-polyglot
+
+[vim-polyglot](https://github.com/sheerun/vim-polyglot) brings better systax highlighting than basic Vim not only for Python.
+Enable all syntax highlighting features you can add the following command to `init.vim`.
+
+```vim
+let g:python_highlight_all = 1
+```
+
+### onedark.vim
+
+[onedark.vim](https://github.com/joshdick/onedark.vim) is one of popular color scheme for Vim editor, and my favorite.
+With installation, set color scheme on `init.vim`.
+
+```vim
+syntax on
+colorscheme onedark
+```
+
 ### pylintrc
 
 ### Tmux Plugin Manager
