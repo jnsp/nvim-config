@@ -200,3 +200,9 @@ make install
 ### omyzsh
 
 ### powerlevel10k
+
+### Softlink
+
+```bash
+ln -s ~/.config/nvim/init.vim ~/projects/nvim-config/init.vim
+```
