@@ -171,7 +171,7 @@ There are so many people frustrated by too kind `pylint`, so you can find every 
 
 ### etc.
 
-Line numbers will be displayed with `set number`.
+Line numbers will be displayed with `set number` on `init.vim`.
 And a vertical line for PEP8 with `set colorcolumn=79`.
 
 ```vim
