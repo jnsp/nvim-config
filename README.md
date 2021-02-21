@@ -169,7 +169,7 @@ You need to set `pylintrc` configuration file to control it or use plugins for `
 I usually load `pylint_flask` and `pylint_flaks_sqlalchemy` plugin on `init.vim`.
 There are so many people frustrated by too kind `pylint`, so you can find every kinds of `pylint` plugin. 
 
-### etc.
+### Etc.
 
 Line numbers will be displayed with `set number` on `init.vim`.
 And a vertical line for PEP8 with `set colorcolumn=79`.
@@ -177,6 +177,14 @@ And a vertical line for PEP8 with `set colorcolumn=79`.
 ```vim
 set number
 set colorcolumn=79
+```
+
+When you search some keywords in vim, the search highlight never disappear until you command `:noh`.
+You can make shourtcuts to clear the hightlight by pressing `esc`-`esc` or `ctrl-l`.
+
+```vim
+nnoremap <esc><esc> :noh<cr>
+nnoremap <C-L> :noh<cr>
 ```
 
 ### Tmux Plugin Manager

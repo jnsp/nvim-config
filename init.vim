@@ -70,5 +70,10 @@ let g:python_highlight_all = 1
   endif
 "endif
 
+" Show line numbers and vertical line
 set number
 set colorcolumn=79
+
+" Clear highlight on pressing `ESC`-`ESC`
+nnoremap <esc><esc> :noh<cr>
+nnoremap <C-L> :noh<cr>
