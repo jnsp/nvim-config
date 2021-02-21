@@ -84,6 +84,9 @@ This is the Vim plugin artist, Tim Pope's [commentary.vim](https://github.com/tp
 Just use `gcc` to comment out some codes.
 I used to do `visual-block mode` when I commented out without `commentary.vim`. Absolutely, this is much easier.
 
+[Tim Pope](https://twitter.com/tpope) did really great jobs for vim users.
+You can look around his jobs [here](https://github.com/tpope).
+
 ### vim-polyglot
 
 [vim-polyglot](https://github.com/sheerun/vim-polyglot) brings better systax highlighting than basic Vim not only for Python.
