@@ -249,15 +249,46 @@ It's easy to install new plugin.
 ### tmux themepack
 
 The first reason I installed the tmux plugin manager is [tmux themepack](https://github.com/jimeh/tmux-themepack) to be out of the green status bar of tmux.
+You have diffenrent options for color, not just ugly green [here](https://github.com/jimeh/tmux-themepack#themes). I chose gray.
 
 ```bash
 set -g @plugin 'jimeh/tmux-themepack'
 set -g @themepack 'powerline/default/gray'
 ```
 
-### tmux truecolor
+## True color issue
+
+When you use some colorthemes for Vim or tmux, you would face the true color issue in terminal.
+You can test your truecolor environment with this script.
+
 ```bash
 curl -s https://raw.githubusercontent.com/JohnMorales/dotfiles/master/colors/24-bit-color.sh | bash
+```
+
+If you can see the beatiful gradation of colors, you're able to use true color in your Vim editor.
+
+Although you have true color environment, you could have some problem with color.
+Then, add some extra setting like below on `init.vim`.
+
+If you use tmux, be sure to view the tmux-related notes in the first few lines.
+Read more about this, [here](https://github.com/joshdick/onedark.vim#installation).
+
+```vim
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+if (empty($TMUX))
+  if (has("nvim"))
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
 ```
 
 ### mosh color problem
