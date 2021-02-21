@@ -315,12 +315,40 @@ make install
 In my case, I have no problem in coloring of Vim editor through mosh and tmux after installing of the latest mosh.
 If you can't solve the problem, just go with 256 color setting with mosh.
 
-### powerlevel10k
+## Something useful
 
-### Softlink
+These are very optional but I recommend it.
+
+### Oh My Zsh
+
+Now that the defalut shell of MacOS is zsh, [Oh My Zsh](https://ohmyz.sh/) is very considerable option for cumtomizing the shell itself.
+Especially, the theme is very handy.
+
+Install with one line bash command.
 
 ```bash
-ln -s ~/.config/nvim/init.vim ~/projects/nvim-config/init.vim
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### Powerlevel10k
+
+[Powerlevel10k](https://github.com/romkatv/powerlevel10k) is a zsh theme.
+It's easy to set, and works fast.
+There are so many different ways to install, select the proper one from [installation guide](https://github.com/romkatv/powerlevel10k#installation).
+
+### Managing configuration files with github and softlink
+
+I include two configuration files in this repository.
+Everytime I set a new environment, I just clone this repository and make softlinks with this files linked to the right paths.
+There is no more copy and paste, and twisted configs everywhere.
+
+If I add some new settings, I have to edit it only in this directory and save it.
+
+```bash
+cd projects
+git clone git@github.com:jnsp/nvim-config.git
+ln -s ~/projects/nvim-config/init.vim ~/.config/nvim/init.vim
+ln -s ~/projects/nvim-config/.tmux.conf ~/.tmux.conf
 ```
 
 ## References
