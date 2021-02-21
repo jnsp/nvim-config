@@ -351,9 +351,12 @@ ln -s ~/projects/nvim-config/init.vim ~/.config/nvim/init.vim
 ln -s ~/projects/nvim-config/.tmux.conf ~/.tmux.conf
 ```
 
+This whole document is for me in the future. 😀
+
 ## References
 
 I got a help to configure my nvim settings by some excellent articles.
+Thanks the authors for sharing their exprience.
 
 * https://www.vimfromscratch.com/articles/vim-for-python/
 * https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/
