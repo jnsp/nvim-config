@@ -245,3 +245,10 @@ make install
 ```bash
 ln -s ~/.config/nvim/init.vim ~/projects/nvim-config/init.vim
 ```
+
+## References
+
+I got a help to configure my nvim settings by some excellent articles.
+
+* https://www.vimfromscratch.com/articles/vim-for-python/
+* https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/
