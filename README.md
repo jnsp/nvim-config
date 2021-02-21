@@ -351,7 +351,7 @@ ln -s ~/projects/nvim-config/init.vim ~/.config/nvim/init.vim
 ln -s ~/projects/nvim-config/.tmux.conf ~/.tmux.conf
 ```
 
-This whole document is for me in the future. 😀
+This whole document is just for me in the future. 😀
 
 ## References
 
