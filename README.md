@@ -145,32 +145,51 @@ ALE is very powerful, but it has a lot of options.
 You should read the doc for this plugin.
 There are some options for me below.
 
+For example, You can fix your file everytime you save it.
+
 ```vim
 " ale - fix files when you save them.
 let g:ale_fix_on_save = 1
+```
 
+You can use different linters at the same time, but it is sometimes confusing which one is warning.
+You need kinder messages from your linters.
+
+```vim
 " ale - kinder message
 " [flake8] E302: expected 2 blank lines, found 1 [E]
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+```
 
+Linters make new space to specify the position of warning or error in your code.
+It could be annoying flashing the gutter space.
+You need to fix the gutter space all the time.
+
+```vim
 " ale - keep the sign gutter open at all times
 let g:ale_sign_column_always = 1
-
-" ale - load pylint plugins
-let g:ale_python_pylint_options = '--load-plugins pylint_flask pylint_flask_sqlalchemy'
-
-" ale - moving between warnings and errors quickly
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
 ```
 
 [pylint](https://www.pylint.org/) is sometimes too strict.
 You need to set `pylintrc` configuration file to control it or use plugins for `pylint`.
 `let g:alie_python_pylint_options` is available on `init.vim` to load specific `pylint` plugin to `ALE`.
 I usually load `pylint_flask` and `pylint_flaks_sqlalchemy` plugin on `init.vim`.
-There are so many people frustrated by too kind `pylint`, so you can find every kinds of `pylint` plugin. 
+There are so many people frustrated by too kind `pylint`, so you can find every kinds of `pylint` plugin you need.
+
+``` vim
+" ale - load pylint plugins
+let g:ale_python_pylint_options = '--load-plugins pylint_flask pylint_flask_sqlalchemy'
+```
+
+You need to move the cursor quickly between warnings and errors by `ctrl-j` and `ctrl-k`.
+
+```vim
+" ale - moving between warnings and errors quickly
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+```
 
 ### Etc.
 
