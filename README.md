@@ -269,9 +269,7 @@ If you can see the beatiful gradation of colors, you're able to use true color i
 
 Although you have true color environment, you could have some problem with color.
 Then, add some extra setting like below on `init.vim`.
-
-If you use tmux, be sure to view the tmux-related notes in the first few lines.
-Read more about this, [here](https://github.com/joshdick/onedark.vim#installation).
+I copied this code from [onedark.vim install part](https://github.com/joshdick/onedark.vim#installation). Be sure to read `tmux`-related notes in the firs few line.
 
 ```vim
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
@@ -291,13 +289,20 @@ if (empty($TMUX))
 endif
 ```
 
-### mosh color problem
-```
+### Mosh
+
+Truecolor issue is also related with [Mosh](https://mosh.org/).
+When you connect to a server with mosh, open tmux, and code in Vim, the coloring is twisted so much.
+
+Fortunately, complicated issues are almost resolved. But tricky thing is you should install the latest version of Mosh. (This is written in 2021-02-21.)
+
+Install latest mosh on Mac with Homebrew.
+
+```bash
 brew install mosh --HEAD
 ```
 
-#### Compiling from Git
-
+Or you can compile from git
 ```bash
 git clone https://github.com/mobile-shell/mosh
 cd mosh
@@ -307,7 +312,8 @@ make
 make install
 ```
 
-### omyzsh
+In my case, I have no problem in coloring of Vim editor through mosh and tmux after installing of the latest mosh.
+If you can't solve the problem, just go with 256 color setting with mosh.
 
 ### powerlevel10k
 
