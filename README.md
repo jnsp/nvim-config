@@ -76,12 +76,12 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 ```
 
-This script adds shortcuts, for example `<C-n>` means `Ctrl-n` and it toggles the file tree on the editor.
+This script adds shortcuts, for example `<C-n>` means <kbd>ctrl</kbd>-<kbd>n</kbd> and it toggles the file tree on the editor.
 
 ### commentary.vim
 
 This is the Vim plugin artist, Tim Pope's [commentary.vim](https://github.com/tpope/vim-commentary).
-Just use `gcc` to comment out some codes.
+Just use <kbd>gcc</kbd> to comment out some codes.
 I used to do `visual-block mode` when I commented out without `commentary.vim`. Absolutely, this is much easier.
 
 [Tim Pope](https://twitter.com/tpope) did really great jobs for vim users.
@@ -202,20 +202,60 @@ set colorcolumn=79
 ```
 
 When you search some keywords in vim, the search highlight never disappear until you command `:noh`.
-You can make shourtcuts to clear the hightlight by pressing `esc`-`esc` or `ctrl-l`.
+You can make shourtcuts to clear the hightlight by pressing <kbd>esc</kbd>-<kbd>esc</kbd> or <kbd>ctrl</kbd>-<kbd>l</kbd>.
 
 ```vim
 nnoremap <esc><esc> :noh<cr>
 nnoremap <C-L> :noh<cr>
 ```
 
-### Tmux Plugin Manager
-https://github.com/tmux-plugins/tpm
+## tmux
 
-### Tmux Themepack
-https://github.com/jimeh/tmux-themepack
+[tmux](https://github.com/tmux/tmux/wiki) is not about Vim.
+But if you do something with terminal, tmux is your best friend to split the window.
 
-### Tmux truecolor
+### tmux plugin manager
+
+tmux also has a lot of plugin.
+You need a [plugin manager](https://github.com/tmux-plugins/tpm) to install them.
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+Don't forget to make a tmux configuration file, `~/.tmux.conf` like below.
+Note that `tmux-plugins/tpm` and `tmux-plugins/tmux-sensible` is mendatory to use the tmux plugin manager.
+
+
+```bash
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'git@github.com:user/plugin'
+# set -g @plugin 'git@bitbucket.com:user/plugin'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+```
+
+It's easy to install new plugin.
+
+1. Add new plugin to `~/.tmux.conf` with `set -g @plugin '<PLUGIN>'`
+2. Press `prefix` + <kbd>I</kbd> (capital i, as in **I**nstall) to fetch the plugin.
+
+### tmux themepack
+
+The first reason I installed the tmux plugin manager is [tmux themepack](https://github.com/jimeh/tmux-themepack) to be out of the green status bar of tmux.
+
+```bash
+set -g @plugin 'jimeh/tmux-themepack'
+set -g @themepack 'powerline/default/gray'
+```
+
+### tmux truecolor
 ```bash
 curl -s https://raw.githubusercontent.com/JohnMorales/dotfiles/master/colors/24-bit-color.sh | bash
 ```
