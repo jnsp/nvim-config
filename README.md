@@ -169,6 +169,15 @@ You need to set `pylintrc` configuration file to control it or use plugins for `
 I usually load `pylint_flask` and `pylint_flaks_sqlalchemy` plugin on `init.vim`.
 There are so many people frustrated by too kind `pylint`, so you can find every kinds of `pylint` plugin. 
 
+### etc.
+
+Line numbers will be displayed with `set number`.
+And a vertical line for PEP8 with `set colorcolumn=79`.
+
+```vim
+set number
+set colorcolumn=79
+```
 
 ### Tmux Plugin Manager
 https://github.com/tmux-plugins/tpm
