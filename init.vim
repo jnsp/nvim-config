@@ -74,6 +74,6 @@ let g:python_highlight_all = 1
 set number
 set colorcolumn=79
 
-" Clear highlight on pressing `ESC`-`ESC`
+" Clear highlights on pressing `ESC`-`ESC`
 nnoremap <esc><esc> :noh<cr>
 nnoremap <C-L> :noh<cr>
