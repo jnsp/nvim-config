@@ -323,7 +323,7 @@ These are very optional but I recommend it.
 ### Oh My Zsh
 
 Now that the default shell of macOS is zsh, [Oh My Zsh](https://ohmyz.sh/) is a viable option for cumtomizing the shell itself.
-Especially, the theme is very handy.
+Especially, the theme is convenient.
 
 Install with one-line bash command.
 
@@ -335,13 +335,13 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 [Powerlevel10k](https://github.com/romkatv/powerlevel10k) is a zsh theme.
 It's easy to set and works fast.
-There are so many different ways to install
+There are so many different ways to install.
 Select the proper one from the [installation guide](https://github.com/romkatv/powerlevel10k#installation).
 
 ### Managing configuration files with github and soft link
 
 I include two configuration files in this repository.
-Every time I set a new environment, I just clone this repository and make soft links with this files linked to the right paths.
+Every time I set a new environment, I just clone this repository and make soft links with these files linked to the right paths.
 There is no more copy and paste and twisted configs everywhere.
 
 If I add some new settings, I have to edit it only in this directory and save it.
@@ -357,8 +357,8 @@ This whole document is just for me in the future. 😀
 
 ## References
 
-I got a help to configure my nvim settings by some excellent articles.
-Thanks the authors for sharing their experience.
+I got a help to configure my nvim settings from some excellent articles.
+Thanks to the authors for sharing their experience.
 
 * https://www.vimfromscratch.com/articles/vim-for-python/
 * https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/
