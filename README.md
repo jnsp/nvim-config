@@ -1,12 +1,12 @@
 # My Neovim Config
 
-This is my [Neovim](https://neovim.io/) setting for Python development on MacOS.
+This is my [Neovim](https://neovim.io/) setting for Python development on macOS.
 
 ## Install
 
 ### Neovim
 
-The easiet way to install neovim is [Homebrew](https://brew.sh/). Other options are [here](https://github.com/neovim/neovim/wiki/Installing-Neovim).
+The easiest way to install Neovim is [Homebrew](https://brew.sh/). Other options are [here](https://github.com/neovim/neovim/wiki/Installing-Neovim).
 
 ```bash
 brew install neovim
@@ -16,9 +16,9 @@ brew install neovim
 
 Vim itself is not very useful.
 We need more plugins for Vim.
-There are many options for installing vim plugin, but [vim-plug](https://github.com/junegunn/vim-plug) is simplest.
+There are many options for installing vim plugin, but [vim-plug](https://github.com/junegunn/vim-plug) is the simplest.
 
-The install directory is different with Vim and Neovim.
+The install directory is different between Vim and Neovim.
 You can read [this](https://github.com/junegunn/vim-plug#neovim) for Neovim.
 
 ```bash
@@ -28,7 +28,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ### init.vim
 
 `init.vim` is the configuration file of Neovim.
-It has different path with Vim.
+It has a different path from Vim.
 The config path of Neovim is `~/.config/nvim/init.vim`
 If you can't find this file, make it manually.
 
@@ -37,9 +37,9 @@ mkdir ~/.config/nvim/
 touch ~/.config/nvim/init.vim
 ```
 
-### How to install plugin in Neovim using `vim-plug`
+### How to install a plugin in Neovim using `vim-plug`
 
-If you want to intall [Nerdtree](https://github.com/preservim/nerdtree), you should write the URL of the repository in `init.vim` file.
+If you want to install [Nerdtree](https://github.com/preservim/nerdtree), you should write the URL of the repository in `init.vim` file.
 It looks like below.
 
 ```vim
@@ -55,19 +55,19 @@ Then open Neovim, write command `:PlugInstall`.
 :PlugInstall
 ```
 
-This is how it works. There are another commands for `vim-plug` [here](https://github.com/junegunn/vim-plug#commands).
+This is how it works. There are other commands for `vim-plug` [here](https://github.com/junegunn/vim-plug#commands).
 
 ## Plugin
 
 I introduce some useful plugins with my taste.
-You can select some of them. But don't install every plugin without understading what they do for you. There are so many vim plugins, many people just installed it. Install one of them carefully watching the difference with before and after the plugin. It's like enjoyful shopping.
+You can select some of them. But don't install every plugin without understanding what they do for you. There are so many vim plugins, and many people just installed them. Please install one of them carefully, watching the difference between before and after the plugin. It's like festive shopping.
 
 ### Nerdtree
 
 The [NERDTree](https://github.com/preservim/nerdtree) is a file system explorer. 
-It makes visual file tree in the Vim editor.
-The NERDTree has no short cuts originally.
-It recomemends some shortcuts to add on `init.vim` like blow.
+It makes a visual file tree in the Vim editor.
+The NERDTree has no shortcuts originally.
+It recommends some shortcuts to add on `init.vim` like below.
 
 ```vim
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -80,16 +80,17 @@ This script adds shortcuts, for example `<C-n>` means <kbd>ctrl</kbd>-<kbd>n</kb
 
 ### commentary.vim
 
-This is the Vim plugin artist, Tim Pope's [commentary.vim](https://github.com/tpope/vim-commentary).
+This is the Vim plugin artist Tim Pope's [commentary.vim](https://github.com/tpope/vim-commentary).
 Just use <kbd>gcc</kbd> to comment out some codes.
-I used to do `visual-block mode` when I commented out without `commentary.vim`. Absolutely, this is much easier.
+I used to do `visual-block mode` when I commented out without `commentary.vim`.
+<kbd>gcc</kbd> is just much easier.
 
-[Tim Pope](https://twitter.com/tpope) did really great jobs for vim users.
+[Tim Pope](https://twitter.com/tpope) did great jobs for vim users.
 You can look around his jobs [here](https://github.com/tpope).
 
 ### vim-polyglot
 
-[vim-polyglot](https://github.com/sheerun/vim-polyglot) brings better systax highlighting than basic Vim not only for Python.
+[vim-polyglot](https://github.com/sheerun/vim-polyglot) brings better syntax highlighting than basic Vim, not only for Python.
 Enable all syntax highlighting features you can add the following command to `init.vim`.
 
 ```vim
@@ -98,7 +99,7 @@ let g:python_highlight_all = 1
 
 ### onedark.vim
 
-[onedark.vim](https://github.com/joshdick/onedark.vim) is one of popular color scheme for Vim editor, and my favorite.
+[onedark.vim](https://github.com/joshdick/onedark.vim) is one of the popular color scheme for Vim editor and my favorite.
 With installation, set color scheme on `init.vim`.
 
 ```vim
@@ -108,11 +109,11 @@ colorscheme onedark
 
 ### vim-airline
 
-[vim-airline](https://github.com/vim-airline/vim-airline) offers a nice status line on the bottome of vim windows.
-It has its own theme plugin, [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes).
+[vim-airline](https://github.com/vim-airline/vim-airline) offers a nice status line on the bottom of vim windows.
+It has its theme plugin, [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes).
 This theme plugin has to be installed too.
 
-vim-airline can use `onedark` theme that was installed above.
+vim-airline can use `onedark` theme installed above.
 Set `airline_powerline_fonts = 1` to use powerline symbols on `init.vim`.
 
 ```vim
@@ -142,17 +143,17 @@ let g:ale_fixers = {
 ```
 
 ALE is very powerful, but it has a lot of options.
-You should read the doc for this plugin.
+It would help if you read the doc for this plugin.
 There are some options for me below.
 
-For example, You can fix your file everytime you save it.
+For example, You can fix your file every time you save it.
 
 ```vim
 " ale - fix files when you save them.
 let g:ale_fix_on_save = 1
 ```
 
-You can use different linters at the same time, but it is sometimes confusing which one is warning.
+You can use different linters simultaneously, but it is sometimes confusing which one is warning.
 You need kinder messages from your linters.
 
 ```vim
@@ -164,8 +165,8 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 ```
 
 Linters make new space to specify the position of warning or error in your code.
-It could be annoying flashing the gutter space.
-You need to fix the gutter space all the time.
+It could be annoying to flash the gutter space.
+It would be best if you kept the gutter space at all times.
 
 ```vim
 " ale - keep the sign gutter open at all times
@@ -201,8 +202,8 @@ set number
 set colorcolumn=79
 ```
 
-When you search some keywords in vim, the search highlight never disappear until you command `:noh`.
-You can make shourtcuts to clear the hightlight by pressing <kbd>esc</kbd>-<kbd>esc</kbd> or <kbd>ctrl</kbd>-<kbd>l</kbd>.
+When you search some keywords in vim, the search highlight never disappears until you command `:noh`.
+You can make shortcuts to clear the hightlight by pressing <kbd>esc</kbd>-<kbd>esc</kbd> or <kbd>ctrl</kbd>-<kbd>l</kbd>.
 
 ```vim
 nnoremap <esc><esc> :noh<cr>
@@ -216,15 +217,15 @@ But if you do something with terminal, tmux is your best friend to split the win
 
 ### tmux plugin manager
 
-tmux also has a lot of plugin.
-You need a [plugin manager](https://github.com/tmux-plugins/tpm) to install them.
+tmux also has a lot of plugins.
+It would help if you had [plugin manager](https://github.com/tmux-plugins/tpm) to install them.
 
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 Don't forget to make a tmux configuration file, `~/.tmux.conf` like below.
-Note that `tmux-plugins/tpm` and `tmux-plugins/tmux-sensible` is mendatory to use the tmux plugin manager.
+Note that `tmux-plugins/tpm` and `tmux-plugins/tmux-sensible` is mandatory to use the tmux plugin manager.
 
 
 ```bash
@@ -265,9 +266,9 @@ You can test your truecolor environment with this script.
 curl -s https://raw.githubusercontent.com/JohnMorales/dotfiles/master/colors/24-bit-color.sh | bash
 ```
 
-If you can see the beatiful gradation of colors, you're able to use true color in your Vim editor.
+If you can see the beautiful gradation of colors, you're able to use true color in your Vim editor.
 
-Although you have true color environment, you could have some problem with color.
+Although you have true color environment, you could have some problems with color.
 Then, add some extra setting like below on `init.vim`.
 I copied this code from [onedark.vim install part](https://github.com/joshdick/onedark.vim#installation). Be sure to read `tmux`-related notes in the firs few line.
 
@@ -312,8 +313,8 @@ make
 make install
 ```
 
-In my case, I have no problem in coloring of Vim editor through mosh and tmux after installing of the latest mosh.
-If you can't solve the problem, just go with 256 color setting with mosh.
+In my case, I have no problem in the coloring of Vim editor through mosh and tmux after installing of the latest mosh.
+If you can't solve the problem, go with 256 color setting with mosh.
 
 ## Something useful
 
@@ -321,10 +322,10 @@ These are very optional but I recommend it.
 
 ### Oh My Zsh
 
-Now that the defalut shell of MacOS is zsh, [Oh My Zsh](https://ohmyz.sh/) is very considerable option for cumtomizing the shell itself.
+Now that the default shell of macOS is zsh, [Oh My Zsh](https://ohmyz.sh/) is a very viable option for cumtomizing the shell itself.
 Especially, the theme is very handy.
 
-Install with one line bash command.
+Install with one-line bash command.
 
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -333,14 +334,15 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ### Powerlevel10k
 
 [Powerlevel10k](https://github.com/romkatv/powerlevel10k) is a zsh theme.
-It's easy to set, and works fast.
-There are so many different ways to install, select the proper one from [installation guide](https://github.com/romkatv/powerlevel10k#installation).
+It's easy to set and works fast.
+There are so many different ways to install
+Select the proper one from the [installation guide](https://github.com/romkatv/powerlevel10k#installation).
 
-### Managing configuration files with github and softlink
+### Managing configuration files with github and soft link
 
 I include two configuration files in this repository.
-Everytime I set a new environment, I just clone this repository and make softlinks with this files linked to the right paths.
-There is no more copy and paste, and twisted configs everywhere.
+Every time I set a new environment, I just clone this repository and make soft links with this files linked to the right paths.
+There is no more copy and paste and twisted configs everywhere.
 
 If I add some new settings, I have to edit it only in this directory and save it.
 
@@ -356,7 +358,7 @@ This whole document is just for me in the future. 😀
 ## References
 
 I got a help to configure my nvim settings by some excellent articles.
-Thanks the authors for sharing their exprience.
+Thanks the authors for sharing their experience.
 
 * https://www.vimfromscratch.com/articles/vim-for-python/
 * https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/
