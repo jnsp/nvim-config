@@ -322,7 +322,7 @@ These are very optional but I recommend it.
 
 ### Oh My Zsh
 
-Now that the default shell of macOS is zsh, [Oh My Zsh](https://ohmyz.sh/) is a very viable option for cumtomizing the shell itself.
+Now that the default shell of macOS is zsh, [Oh My Zsh](https://ohmyz.sh/) is a viable option for cumtomizing the shell itself.
 Especially, the theme is very handy.
 
 Install with one-line bash command.
